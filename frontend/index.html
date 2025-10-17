@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web Quiz — HTML / CSS / JS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="theme.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Web Technologies Quiz</h1>
+      <div class="theme-controls">
+        <label class="theme-switch">
+          <input id="themeToggle" type="checkbox" aria-label="Toggle dark theme">
+          <span class="switch-track"></span>
+        </label>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="quiz" class="card">
+        <div id="progress" class="progress">Question <span id="current">1</span> of <span id="total">0</span></div>
+        <h2 id="question" class="question">Loading...</h2>
+        <div id="choices" class="choices" role="list"></div>
+        <div class="controls">
+          <button id="nextBtn" class="btn primary" disabled>Next</button>
+          <button id="restartBtn" class="btn ghost" hidden>Restart</button>
+        </div>
+      </section>
+
+      <section id="result" class="card result-card" hidden>
+        <h2>Your Score</h2>
+        <p id="scoreText" class="score-text"></p>
+        <button id="tryAgain" class="btn primary">Try Again</button>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <small>Built with HTML, CSS and JavaScript • Enjoy learning!</small>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
