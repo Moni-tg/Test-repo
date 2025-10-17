@@ -1,0 +1,21 @@
+:root{
+  /* initial theme hint (can be overridden by prefers-color-scheme or user choice) */
+  --initial-theme: light;
+}
+
+/* Dark theme overrides */
+:root[data-theme='dark']{
+  --bg: #0b1220;
+  --card: #0f1724;
+  --text: #e6eef8;
+  --muted: #94a3b8;
+  --primary: #7c5cff;
+  --accent: #00d28a;
+  --danger: #ff6b6b;
+  --shadow: rgba(2,6,23,0.6);
+}
+
+/* Respect prefers-color-scheme as initial suggestion */
+@media (prefers-color-scheme: dark){
+  :root{ --initial-theme: dark }
+}
